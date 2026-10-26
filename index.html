@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>School Carbon Footprint Calculator</title>
+  <meta name="description" content="A simple, decision grade carbon footprint estimator for schools. Every number sourced and checkable.">
+  <link rel="preload" href="assets/fonts/hanken-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/bricolage-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="brand">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path class="brand-leaf" d="M20 4C11 4 5 8 4 16c-.3 2.4.4 4 .4 4s5.6-1 9-4.5c2.8-2.9 4-8.5 6.6-11.5z" fill="currentColor"/><path d="M6 18C9 13 13 9.5 17 7.5" stroke="var(--surface)" stroke-width="1.4" stroke-linecap="round"/></svg>
+        <span>School Carbon</span>
+      </div>
+    </div>
+    <div class="wrap"><div id="stepper" class="stepper"></div></div>
+  </header>
+
+  <div id="flash" role="status" style="display:none;position:fixed;left:50%;top:76px;transform:translateX(-50%);z-index:50;background:var(--high);color:#fff;padding:10px 18px;border-radius:100px;font-weight:600;font-size:.9rem;box-shadow:var(--shadow-lg)"></div>
+
+  <main class="wrap"><div id="stage"></div></main>
+
+  <footer class="site-foot wrap">
+    <p>A decision grade estimation tool for schools. Data from Ember, IEA, UK DEFRA and DESNZ, the GHG Protocol, CIBSE, and Poore and Nemecek (2018). Not a certified audit or a carbon offset.</p>
+  </footer>
+
+  <script src="assets/vendor/jspdf.umd.min.js"></script>
+  <script src="assets/factors.js"></script>
+  <script src="assets/engine.js"></script>
+  <script src="assets/report.js"></script>
+  <script src="assets/download.js"></script>
+  <script src="assets/map.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
